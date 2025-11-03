@@ -1,5 +1,7 @@
 # CI/CD Pipeline Explained for Beginners
 
+> **Current Pipeline:** 4 stages - Test, Code Quality, SAST, SCA
+
 A visual guide to understanding how the security pipeline works.
 
 ## 🔄 Pipeline Flow Diagram

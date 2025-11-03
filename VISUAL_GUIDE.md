@@ -1,5 +1,7 @@
 # Visual Guide to DevSecOps CI/CD
 
+> **Structure:** Root (insecure + CI/CD) | secure/ (reference only)
+
 A visual reference guide with diagrams and examples.
 
 ## 🎨 Project Structure Visualization

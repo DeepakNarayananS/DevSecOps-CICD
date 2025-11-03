@@ -1,5 +1,7 @@
 # Setup Checklist
 
+> **Pipeline:** Test → Code Quality → SAST → SCA
+
 Use this checklist to ensure you've completed all setup steps correctly.
 
 ## 📋 Pre-Deployment Checklist

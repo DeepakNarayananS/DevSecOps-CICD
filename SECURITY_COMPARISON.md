@@ -1,5 +1,7 @@
 # Security Comparison: Insecure vs Secure
 
+> **Compare:** Root folder (vulnerable) vs secure/ folder (fixed)
+
 This document provides a side-by-side comparison of the vulnerabilities and their fixes.
 
 ## 📊 Quick Comparison Table

@@ -1,5 +1,7 @@
 # Project Enhancement Summary
 
+> **Latest Update:** Restructured to single root folder with 4-stage pipeline
+
 ## ✅ What Was Added
 
 This document summarizes all enhancements made to the DevSecOps-CICD project.
