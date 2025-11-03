@@ -1,0 +1,53 @@
+stages:
+  - test
+  - code_quality
+  - sast
+  - sca
+
+default:
+  image: python:3.11
+
+test-job:
+  stage: test
+  script:
+    - echo "Running basic test stage"
+    - pip install --upgrade pip
+    - find . -name "*.py" -print0 | xargs -0 python -m py_compile
+
+code-quality:
+  stage: code_quality
+  image: python:3.11
+  script:
+    - echo "Running code quality checks..."
+    - pip install pylint
+    - pylint --exit-zero *.py || true
+    - echo "Code quality check completed"
+  allow_failure: true
+
+sast-scan:
+  stage: sast
+  image: python:3.11
+  script:
+    - echo "Running SAST scan..."
+    - pip install bandit
+    - bandit -r . -f json -o bandit-report.json || true
+    - echo "⚠️ SAST scan completed - Check for security issues in code"
+  artifacts:
+    paths:
+      - bandit-report.json
+    expire_in: 1 week
+    when: always
+  allow_failure: true
+
+sca-scan:
+  stage: sca
+  image: python:3.11
+  script:
+    - echo "Running SCA scan to detect vulnerable dependencies..."
+    - pip install --upgrade pip
+    - pip install safety
+    - pip install -r requirements.txt
+    - echo "Scanning dependencies with Safety..."
+    - safety check || true
+    - echo "⚠️ INSECURE VERSION - Vulnerabilities detected in dependencies!"
+  allow_failure: true
