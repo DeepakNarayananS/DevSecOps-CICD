@@ -4,29 +4,25 @@ Get up and running with the DevSecOps CI/CD demo in 5 minutes!
 
 ## 🚀 Fastest Path to Results
 
-### Step 1: Choose Your Version (2 minutes)
-
-Pick one to start with:
-- **Insecure version** - See vulnerabilities in action
-- **Secure version** - See clean security scans
-
-### Step 2: Deploy to GitLab (2 minutes)
+### Step 1: Fork or Clone (1 minute)
 
 ```bash
-# Navigate to your chosen folder
-cd DevSecOps-CICD/insecure-cicd
-# OR
-cd DevSecOps-CICD/secure-cicd
-
-# Initialize and push
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin https://gitlab.com/YOUR-USERNAME/YOUR-PROJECT.git
-git push -u origin main
+# Clone the repository
+git clone https://github.com/DeepakNarayananS/DevSecOps-CICD.git
+cd DevSecOps-CICD
 ```
 
-### Step 3: Watch the Pipeline (1 minute)
+### Step 2: Push to GitLab (2 minutes)
+
+```bash
+# Add your GitLab remote
+git remote add gitlab https://gitlab.com/YOUR-USERNAME/devsecops-cicd.git
+
+# Push to GitLab (triggers pipeline)
+git push gitlab main
+```
+
+### Step 3: Watch the Pipeline (2 minutes)
 
 1. Go to your GitLab project
 2. Click **CI/CD > Pipelines**
@@ -35,31 +31,33 @@ git push -u origin main
 
 ## 📊 What to Look For
 
-### In the Insecure Pipeline:
+### Pipeline Stages:
 
-**SCA Job** - Look for:
+**Test Stage** - Look for:
+```
+✅ Running basic test stage
+✅ Code compiles successfully
+```
+
+**Code Quality Stage** - Look for:
+```
+✅ Running code quality checks
+⚠️ Some quality issues detected (expected)
+```
+
+**SAST Stage** - Look for:
+```
+⚠️ Running SAST scan
+⚠️ Security issues detected in code
+```
+
+**SCA Stage** - Look for:
 ```
 ⚠️ VULNERABILITIES FOUND: 4
 - Flask 2.0.1: CVE-2023-30861 (HIGH)
 - Jinja2 2.11.3: CVE-2024-22195 (MEDIUM)
 - PyYAML 5.3.1: CVE-2020-14343 (CRITICAL)
 ```
-
-**SAST Job** - Look for:
-- XSS vulnerability warnings
-- Insecure deserialization alerts
-- Debug mode warnings
-
-### In the Secure Pipeline:
-
-**SCA Job** - Look for:
-```
-✅ No known vulnerabilities detected!
-```
-
-**SAST Job** - Look for:
-- Clean scan results
-- No critical issues
 
 ## 🧪 Local Testing (Optional)
 
@@ -68,21 +66,24 @@ Want to test locally before pushing to GitLab?
 ```bash
 # Install dependencies
 pip install -r requirements.txt
-pip install safety
+pip install safety bandit
 
 # Run SCA scan
 safety check
 
-# Insecure version: Shows vulnerabilities ⚠️
-# Secure version: Shows clean ✅
+# Run SAST scan
+bandit -r . -f json
+
+# Current version: Shows vulnerabilities ⚠️
+# After fixes: Shows clean ✅
 ```
 
 ## 🎯 Next Steps
 
-1. **Compare Results** - Deploy both versions and compare pipeline outputs
-2. **Read the Code** - Look at the differences between vulnerable_app.py and secure_app.py
-3. **Experiment** - Try modifying the code and see how it affects security scans
-4. **Learn More** - Read the detailed READMEs in each folder
+1. **Review Results** - Check the pipeline output for security findings
+2. **Compare Code** - Look at root folder (insecure) vs secure/ folder (fixed)
+3. **Apply Fixes** - Copy files from secure/ to root and push to see clean results
+4. **Learn More** - Read README.md and SECURITY_COMPARISON.md
 
 ## 💡 Pro Tips
 

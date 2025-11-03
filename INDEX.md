@@ -7,20 +7,20 @@ Your complete guide to navigating the DevSecOps CI/CD project.
 ### For Complete Beginners
 1. **[QUICK_START.md](QUICK_START.md)** - Get running in 5 minutes
 2. **[SETUP_CHECKLIST.md](SETUP_CHECKLIST.md)** - Step-by-step checklist
-3. **[VISUAL_GUIDE.md](VISUAL_GUIDE.md)** - Visual diagrams and examples
+3. **[GIT_COMMANDS_GUIDE.md](GIT_COMMANDS_GUIDE.md)** - Complete Git commands reference
 
 ### For Quick Overview
 1. **[README.md](README.md)** - Complete project overview
-2. **[PROJECT_SUMMARY.md](PROJECT_SUMMARY.md)** - What was added
+2. **[PROJECT_SUMMARY.md](PROJECT_SUMMARY.md)** - Technical summary
 
 ## 📚 Learning Materials
 
 ### Understanding Security Testing
 - **[PIPELINE_EXPLAINED.md](PIPELINE_EXPLAINED.md)** - How the pipeline works
   - Visual pipeline flow
-  - Each stage explained
-  - SAST vs SCA vs DAST comparison
+  - Each stage explained (Test, Code Quality, SAST, SCA)
   - Reading pipeline results
+  - Understanding security findings
 
 ### Understanding Vulnerabilities
 - **[SECURITY_COMPARISON.md](SECURITY_COMPARISON.md)** - Detailed vulnerability analysis
@@ -36,21 +36,26 @@ Your complete guide to navigating the DevSecOps CI/CD project.
   - Attack scenario illustrations
   - Learning path progression
 
+### Git & Version Control
+- **[GIT_COMMANDS_GUIDE.md](GIT_COMMANDS_GUIDE.md)** - Complete Git reference
+  - All commands used in this project
+  - Step-by-step workflows
+  - Visual examples
+  - Troubleshooting guide
+
 ## 🔧 Implementation Guides
 
-### Insecure Version
-- **[insecure-cicd/README.md](insecure-cicd/README.md)** - Complete setup guide
-  - What's vulnerable and why
-  - Setup instructions
-  - Expected results
-  - Local testing guide
+### Root Folder (Insecure Code)
+- **Active CI/CD pipeline** with vulnerable code
+- Demonstrates security issues
+- Triggers automated security testing
 
-### Secure Version
-- **[secure-cicd/README.md](secure-cicd/README.md)** - Complete setup guide
+### Secure Folder
+- **[secure/README.md](secure/README.md)** - Security fixes reference
+  - Fixed implementations
   - Security best practices
-  - Setup instructions
-  - Expected results
-  - Comparison with insecure version
+  - How to apply fixes
+  - Comparison with insecure code
 
 ## 📖 Documentation by Purpose
 
@@ -62,77 +67,66 @@ Your complete guide to navigating the DevSecOps CI/CD project.
 
 #### ...Understand the Pipeline
 → Read: [PIPELINE_EXPLAINED.md](PIPELINE_EXPLAINED.md)
-→ Visual: [VISUAL_GUIDE.md](VISUAL_GUIDE.md) (Pipeline section)
+→ Visual: [VISUAL_GUIDE.md](VISUAL_GUIDE.md)
 
 #### ...Learn About Vulnerabilities
 → Read: [SECURITY_COMPARISON.md](SECURITY_COMPARISON.md)
-→ Visual: [VISUAL_GUIDE.md](VISUAL_GUIDE.md) (Attack scenarios)
+→ Compare: Root folder vs secure/ folder
 
-#### ...Set Up the Insecure Version
-→ Read: [insecure-cicd/README.md](insecure-cicd/README.md)
-→ Checklist: [SETUP_CHECKLIST.md](SETUP_CHECKLIST.md) (Insecure section)
+#### ...Use Git Commands
+→ Read: [GIT_COMMANDS_GUIDE.md](GIT_COMMANDS_GUIDE.md)
+→ Reference: Quick command lookup
 
-#### ...Set Up the Secure Version
-→ Read: [secure-cicd/README.md](secure-cicd/README.md)
-→ Checklist: [SETUP_CHECKLIST.md](SETUP_CHECKLIST.md) (Secure section)
-
-#### ...Understand What Was Added
+#### ...Understand What Was Built
 → Read: [PROJECT_SUMMARY.md](PROJECT_SUMMARY.md)
-
-#### ...See Visual Examples
-→ Read: [VISUAL_GUIDE.md](VISUAL_GUIDE.md)
-
-#### ...Get a Complete Overview
-→ Read: [README.md](README.md)
+→ Overview: [README.md](README.md)
 
 ## 📋 Documentation by Skill Level
 
 ### Beginner Level
 1. [QUICK_START.md](QUICK_START.md) - Fast setup
 2. [SETUP_CHECKLIST.md](SETUP_CHECKLIST.md) - Guided steps
-3. [VISUAL_GUIDE.md](VISUAL_GUIDE.md) - Visual learning
+3. [GIT_COMMANDS_GUIDE.md](GIT_COMMANDS_GUIDE.md) - Git basics
 4. [PIPELINE_EXPLAINED.md](PIPELINE_EXPLAINED.md) - Pipeline basics
 
 ### Intermediate Level
 1. [SECURITY_COMPARISON.md](SECURITY_COMPARISON.md) - Vulnerability details
-2. [insecure-cicd/README.md](insecure-cicd/README.md) - Insecure implementation
-3. [secure-cicd/README.md](secure-cicd/README.md) - Secure implementation
-4. [README.md](README.md) - Complete overview
+2. [VISUAL_GUIDE.md](VISUAL_GUIDE.md) - Visual learning
+3. [README.md](README.md) - Complete overview
+4. [secure/README.md](secure/README.md) - Security fixes
 
 ### Advanced Level
 1. [PROJECT_SUMMARY.md](PROJECT_SUMMARY.md) - Technical details
-2. [README.md](README.md) - Extension ideas
-3. Pipeline configuration files (.gitlab-ci.yml)
-4. Source code files (vulnerable_app.py, secure_app.py)
+2. [GIT_COMMANDS_GUIDE.md](GIT_COMMANDS_GUIDE.md) - Advanced Git
+3. Pipeline configuration (.gitlab-ci.yml)
+4. Source code analysis
 
 ## 🎯 Documentation by Topic
 
 ### Setup & Installation
 - [QUICK_START.md](QUICK_START.md)
 - [SETUP_CHECKLIST.md](SETUP_CHECKLIST.md)
-- [insecure-cicd/README.md](insecure-cicd/README.md) (Setup section)
-- [secure-cicd/README.md](secure-cicd/README.md) (Setup section)
+- [GIT_COMMANDS_GUIDE.md](GIT_COMMANDS_GUIDE.md)
 
 ### Security Concepts
 - [PIPELINE_EXPLAINED.md](PIPELINE_EXPLAINED.md)
 - [SECURITY_COMPARISON.md](SECURITY_COMPARISON.md)
-- [VISUAL_GUIDE.md](VISUAL_GUIDE.md) (Security layers)
+- [secure/README.md](secure/README.md)
 
 ### CI/CD Pipeline
 - [PIPELINE_EXPLAINED.md](PIPELINE_EXPLAINED.md)
-- [VISUAL_GUIDE.md](VISUAL_GUIDE.md) (Pipeline flow)
-- [README.md](README.md) (Pipeline section)
+- [VISUAL_GUIDE.md](VISUAL_GUIDE.md)
+- [README.md](README.md)
 
 ### Vulnerabilities & Fixes
 - [SECURITY_COMPARISON.md](SECURITY_COMPARISON.md)
-- [VISUAL_GUIDE.md](VISUAL_GUIDE.md) (Attack scenarios)
-- [insecure-cicd/README.md](insecure-cicd/README.md)
-- [secure-cicd/README.md](secure-cicd/README.md)
+- [secure/README.md](secure/README.md)
+- Root folder code vs secure/ folder code
 
-### Tools & Technologies
-- [PROJECT_SUMMARY.md](PROJECT_SUMMARY.md) (Tools section)
-- [README.md](README.md) (Tools section)
-- [PIPELINE_EXPLAINED.md](PIPELINE_EXPLAINED.md) (Tools explanation)
+### Version Control
+- [GIT_COMMANDS_GUIDE.md](GIT_COMMANDS_GUIDE.md)
+- Daily workflow examples
+- Troubleshooting Git issues
 
 ## 📊 File Overview
 
@@ -146,50 +140,53 @@ Your complete guide to navigating the DevSecOps CI/CD project.
 | [SECURITY_COMPARISON.md](SECURITY_COMPARISON.md) | Vulnerability analysis | Long | Intermediate |
 | [PIPELINE_EXPLAINED.md](PIPELINE_EXPLAINED.md) | Pipeline flow guide | Long | All |
 | [VISUAL_GUIDE.md](VISUAL_GUIDE.md) | Visual diagrams | Long | Visual learners |
+| [GIT_COMMANDS_GUIDE.md](GIT_COMMANDS_GUIDE.md) | Git reference | Long | All |
 | [PROJECT_SUMMARY.md](PROJECT_SUMMARY.md) | Technical summary | Medium | Advanced |
 | [INDEX.md](INDEX.md) | This file | Short | All |
 
-### Insecure Folder Files
+### Root Folder (Insecure Code)
 
 | File | Purpose | Type |
 |------|---------|------|
 | .gitlab-ci.yml | Pipeline configuration | Config |
 | requirements.txt | Vulnerable dependencies | Config |
 | vulnerable_app.py | Insecure Flask app | Code |
-| README.md | Setup & explanation | Docs |
-| [Other .py files] | Original examples | Code |
+| codequalitybug.py | Code quality issues | Code |
+| httpbug.py | HTTP security issues | Code |
+| unsafe.py | Unsafe patterns | Code |
 
-### Secure Folder Files
+### Secure Folder (Fixed Code)
 
 | File | Purpose | Type |
 |------|---------|------|
-| .gitlab-ci.yml | Pipeline configuration | Config |
-| requirements.txt | Secure dependencies | Config |
 | secure_app.py | Secure Flask app | Code |
-| README.md | Setup & explanation | Docs |
-| [Other .py files] | Original examples | Code |
+| requirements.txt | Secure dependencies | Config |
+| codequalityfix.py | Fixed code | Code |
+| httpfix.py | Fixed HTTP | Code |
+| safe.py | Safe patterns | Code |
+| README.md | Security guide | Docs |
 
 ## 🎓 Recommended Reading Order
 
 ### Path 1: Quick Start (30 minutes)
 1. [QUICK_START.md](QUICK_START.md) - 5 min
 2. [SETUP_CHECKLIST.md](SETUP_CHECKLIST.md) - 10 min
-3. Deploy and run pipelines - 15 min
+3. Push to GitLab and watch pipeline - 15 min
 
 ### Path 2: Complete Learning (3-4 hours)
 1. [README.md](README.md) - 20 min
 2. [QUICK_START.md](QUICK_START.md) - 5 min
-3. Deploy both versions - 20 min
+3. Push to GitLab - 10 min
 4. [PIPELINE_EXPLAINED.md](PIPELINE_EXPLAINED.md) - 30 min
 5. [SECURITY_COMPARISON.md](SECURITY_COMPARISON.md) - 45 min
-6. [VISUAL_GUIDE.md](VISUAL_GUIDE.md) - 30 min
-7. [insecure-cicd/README.md](insecure-cicd/README.md) - 20 min
-8. [secure-cicd/README.md](secure-cicd/README.md) - 20 min
+6. [GIT_COMMANDS_GUIDE.md](GIT_COMMANDS_GUIDE.md) - 30 min
+7. [VISUAL_GUIDE.md](VISUAL_GUIDE.md) - 30 min
+8. [secure/README.md](secure/README.md) - 20 min
 9. Hands-on experimentation - 60 min
 
 ### Path 3: Deep Dive (1-2 days)
 1. Read all documentation
-2. Deploy and test both versions
+2. Deploy to GitLab
 3. Study all code files
 4. Experiment with modifications
 5. Research CVEs in detail
@@ -201,31 +198,31 @@ Your complete guide to navigating the DevSecOps CI/CD project.
 ### Setup Instructions
 - Quick: [QUICK_START.md](QUICK_START.md)
 - Detailed: [SETUP_CHECKLIST.md](SETUP_CHECKLIST.md)
-- Insecure: [insecure-cicd/README.md](insecure-cicd/README.md)
-- Secure: [secure-cicd/README.md](secure-cicd/README.md)
+- Git: [GIT_COMMANDS_GUIDE.md](GIT_COMMANDS_GUIDE.md)
 
 ### Understanding Security Tests
+- Test: [PIPELINE_EXPLAINED.md](PIPELINE_EXPLAINED.md) (Stage 1)
+- Code Quality: [PIPELINE_EXPLAINED.md](PIPELINE_EXPLAINED.md) (Stage 2)
 - SAST: [PIPELINE_EXPLAINED.md](PIPELINE_EXPLAINED.md) (Stage 3)
 - SCA: [PIPELINE_EXPLAINED.md](PIPELINE_EXPLAINED.md) (Stage 4)
-- DAST: [PIPELINE_EXPLAINED.md](PIPELINE_EXPLAINED.md) (Stage 5)
-- Comparison: [PIPELINE_EXPLAINED.md](PIPELINE_EXPLAINED.md) (SAST vs SCA vs DAST)
 
 ### Vulnerability Details
-- XSS: [SECURITY_COMPARISON.md](SECURITY_COMPARISON.md) (Section 1)
-- Deserialization: [SECURITY_COMPARISON.md](SECURITY_COMPARISON.md) (Section 2)
-- Dependencies: [SECURITY_COMPARISON.md](SECURITY_COMPARISON.md) (Section 3)
+- XSS: [SECURITY_COMPARISON.md](SECURITY_COMPARISON.md)
+- Deserialization: [SECURITY_COMPARISON.md](SECURITY_COMPARISON.md)
+- Dependencies: [SECURITY_COMPARISON.md](SECURITY_COMPARISON.md)
 - All CVEs: [SECURITY_COMPARISON.md](SECURITY_COMPARISON.md)
 
 ### Visual Examples
 - Pipeline flow: [VISUAL_GUIDE.md](VISUAL_GUIDE.md)
 - Attack scenarios: [VISUAL_GUIDE.md](VISUAL_GUIDE.md)
 - Comparisons: [VISUAL_GUIDE.md](VISUAL_GUIDE.md)
-- Workflows: [VISUAL_GUIDE.md](VISUAL_GUIDE.md)
+- Git workflows: [GIT_COMMANDS_GUIDE.md](GIT_COMMANDS_GUIDE.md)
 
 ### Troubleshooting
-- General: [README.md](README.md) (Troubleshooting section)
-- Setup: [SETUP_CHECKLIST.md](SETUP_CHECKLIST.md) (Troubleshooting section)
-- Pipeline: [PIPELINE_EXPLAINED.md](PIPELINE_EXPLAINED.md) (How to fix issues)
+- General: [README.md](README.md)
+- Setup: [SETUP_CHECKLIST.md](SETUP_CHECKLIST.md)
+- Git: [GIT_COMMANDS_GUIDE.md](GIT_COMMANDS_GUIDE.md)
+- Pipeline: [PIPELINE_EXPLAINED.md](PIPELINE_EXPLAINED.md)
 
 ## 📱 Quick Links
 
@@ -233,6 +230,7 @@ Your complete guide to navigating the DevSecOps CI/CD project.
 - 🚀 [Get Started](QUICK_START.md)
 - 📋 [Setup Checklist](SETUP_CHECKLIST.md)
 - 📖 [Main README](README.md)
+- 💻 [Git Commands](GIT_COMMANDS_GUIDE.md)
 
 ### Learning Resources
 - 🎓 [Pipeline Explained](PIPELINE_EXPLAINED.md)
@@ -240,8 +238,8 @@ Your complete guide to navigating the DevSecOps CI/CD project.
 - 🎨 [Visual Guide](VISUAL_GUIDE.md)
 
 ### Implementation
-- 🔴 [Insecure Guide](insecure-cicd/README.md)
-- 🟢 [Secure Guide](secure-cicd/README.md)
+- 🔴 Root Folder (Insecure with CI/CD)
+- 🟢 [Secure Folder](secure/README.md) (Reference)
 - 📊 [Project Summary](PROJECT_SUMMARY.md)
 
 ## 💡 Tips for Using This Documentation
@@ -250,7 +248,7 @@ Your complete guide to navigating the DevSecOps CI/CD project.
 1. Start with QUICK_START.md
 2. Follow the beginner learning path
 3. Use SETUP_CHECKLIST.md to track progress
-4. Refer to VISUAL_GUIDE.md for visual learning
+4. Refer to GIT_COMMANDS_GUIDE.md for Git help
 5. Deep dive with SECURITY_COMPARISON.md
 
 ### For Teaching
@@ -258,7 +256,7 @@ Your complete guide to navigating the DevSecOps CI/CD project.
 2. Assign QUICK_START.md as pre-work
 3. Use VISUAL_GUIDE.md for presentations
 4. Reference SECURITY_COMPARISON.md for discussions
-5. Use SETUP_CHECKLIST.md for lab exercises
+5. Use GIT_COMMANDS_GUIDE.md for version control training
 
 ### For Reference
 1. Bookmark INDEX.md (this file)
@@ -269,31 +267,32 @@ Your complete guide to navigating the DevSecOps CI/CD project.
 
 ## 🔄 Documentation Updates
 
-This documentation is comprehensive and covers:
+This documentation covers:
 - ✅ Complete setup instructions
-- ✅ Security concepts and testing
+- ✅ Security concepts and testing (4 stages: Test, Code Quality, SAST, SCA)
 - ✅ Vulnerability details and fixes
 - ✅ Visual guides and diagrams
+- ✅ Complete Git command reference
 - ✅ Troubleshooting help
 - ✅ Learning paths
-- ✅ Quick references
 
 ## 📞 Need Help?
 
 1. **Can't find something?** Use this INDEX.md to navigate
 2. **Need quick start?** Go to [QUICK_START.md](QUICK_START.md)
 3. **Want visuals?** Check [VISUAL_GUIDE.md](VISUAL_GUIDE.md)
-4. **Need details?** Read [README.md](README.md)
+4. **Need Git help?** Read [GIT_COMMANDS_GUIDE.md](GIT_COMMANDS_GUIDE.md)
 5. **Stuck on setup?** Follow [SETUP_CHECKLIST.md](SETUP_CHECKLIST.md)
 
 ## 🎯 Summary
 
-This project includes **8 comprehensive documentation files** covering:
+This project includes **9 comprehensive documentation files** covering:
 - Setup and installation
-- Security concepts
+- Security concepts (Test, Code Quality, SAST, SCA)
 - Pipeline configuration
 - Vulnerability analysis
 - Visual guides
+- Git commands and workflows
 - Troubleshooting
 - Learning paths
 
