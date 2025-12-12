@@ -3,3 +3,4 @@ flask==2.0.1  # Known vulnerabilities (CVE-2023-30861)
 requests==2.25.0  # Outdated version with known issues
 jinja2==2.11.3  # Vulnerable to XSS (CVE-2024-22195)
 pyyaml==5.3.1  # Vulnerable to arbitrary code execution
+urllib3>=2.6.0 # not directly required, pinned by Snyk to avoid a vulnerability
