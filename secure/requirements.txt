@@ -3,3 +3,4 @@ flask==3.0.0  # Latest stable version with security fixes
 requests==2.31.0  # Latest version with all security patches
 jinja2==3.1.2  # Patched version without XSS vulnerabilities
 pyyaml==6.0.1  # Secure version with safe_load enforced
+urllib3>=2.6.0 # not directly required, pinned by Snyk to avoid a vulnerability
